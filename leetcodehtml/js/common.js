@@ -1,4 +1,6 @@
 $(()=>{
+
+    $('body').css({'overflow-x':'auto'})
     $('#navbarTogglerDemo02>ul').html('');
     let curloc = window.location.pathname;
     problems.forEach(el=>{

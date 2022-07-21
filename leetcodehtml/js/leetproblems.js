@@ -30,8 +30,23 @@ var problems = [
         keywords: "206,reverse linkedlist,leetcode,solutions, javascript, linked list, recursion"
     },{
         q: "876. Middle of the Linked List",
-        filename: "876-middle-of-the-linked-list",
+        filename: "876-middle-of-the-linked-list.html",
         keywords: "876, middle of the Linked List, leet code, solutions, javascript, linked list, two pointers"
+    },
+    {
+        q: "142. Linked List Cycle II",
+        filename: "142-linkedlist-cycleII.html",
+        keywords: "142 linkedlist cycle2, leet code, solutions, javascript, linked list, two pointers"
+    },
+    {
+        q: "121. Best Time to Buy and Sell Stock",
+        filename: "121-best-time-to-buy-and-sell-stock",
+        keywords: "121 best time to buy and sell stock, leet code, solutions, javascript, linked list, two pointers"
+    },
+    {
+        q: "409. Longest Palindrome",
+        filename: "longest-palindrome.html",
+        keywords: "409, Longest Palindrome , leet code, solutions, javascript, linked list, two pointers"
     }
 
 ]
