@@ -21,8 +21,13 @@ var problems = [
     },
     {
         q: "21. Merge Two Sorted Lists",
-        filename: "21-merge-two -sorted-lists.html",
+        filename: "21-merge-two-sorted-lists.html",
         keywords: "21,Merge,Two,Sorted Lists, leetcode,solutions, javascript, linked list, recursion"
+    },
+    {
+        q: "206. Reverse Linked List",
+        filename: "206-reverse-linked-list.html",
+        keywords: "206,reverse linkedlist,leetcode,solutions, javascript, linked list, recursion"
     }
 
 ]
