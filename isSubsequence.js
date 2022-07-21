@@ -12,8 +12,7 @@ var isSubsequence = function(s, t) {
         }
         
     }
-    return p1 === s.length;
-    
+    return p1 === s.length;    
     
 };
 
