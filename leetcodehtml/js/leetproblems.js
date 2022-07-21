@@ -28,6 +28,10 @@ var problems = [
         q: "206. Reverse Linked List",
         filename: "206-reverse-linked-list.html",
         keywords: "206,reverse linkedlist,leetcode,solutions, javascript, linked list, recursion"
+    },{
+        q: "876. Middle of the Linked List",
+        filename: "876-middle-of-the-linked-list",
+        keywords: "876, middle of the Linked List, leet code, solutions, javascript, linked list, two pointers"
     }
 
 ]
