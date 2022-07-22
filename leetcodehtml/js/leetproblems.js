@@ -47,6 +47,11 @@ var problems = [
         q: "409. Longest Palindrome",
         filename: "longest-palindrome.html",
         keywords: "409, Longest Palindrome , leet code, solutions, javascript, linked list, two pointers"
+    },
+    {
+        q: "589. N-ary Tree Preorder Traversal",
+        filename: "589-n-ary-tree-preorder-travesal.html",
+        keywords: "589, n-ary,tree-preorder-travesal, leet code, problem solutions, javascript"
     }
 
 ]
