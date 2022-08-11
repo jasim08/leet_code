@@ -7,7 +7,7 @@ var _numberOfPairs= function (arr, val){
     return  pairs
 }
 
-var numberOfPairs = function(nums) {
+var numberOfPairs1 = function(nums) {
     // nums = [1,2,3,1,2,4,5]
     // if nums[1] === nums[4]{
    //     remove 1 and 4
@@ -32,6 +32,25 @@ var numberOfPairs = function(nums) {
  
     
 
+};
+
+var numberOfPairs = function(nums) {
+    
+    let pair = {};
+    let paircount = 0;
+    for(let i=0; i < nums.length; i++){
+        if(pair[nums[i]]){
+            console.log(pair)
+            delete pair[nums[i]];
+            paircount++;
+        }else{
+            pair[nums[i]] = 1;
+        }
+       
+        
+    }
+    return [paircount, Object.keys(pair).length];
+    
 };
 
 console.log(numberOfPairs([1,2,3,1,2,3,4,5]))

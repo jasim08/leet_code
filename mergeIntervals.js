@@ -1,0 +1,30 @@
+var merge = function(intervals) {
+    intervals.sort(([ aStart, aEnd ], [ bStart, bEnd ]) => aStart !== bStart
+        ? aStart - bStart
+        : aEnd - bEnd
+    );
+
+    // return intervals;
+    return mergerInterval(intervals)
+};
+
+const mergerInterval = (intervals, merged = []) => {
+    let prev = intervals.shift();
+    for (const curr of intervals) {
+        const [ prevStart, prevEnd ] = prev;
+        const [ currStart, currEnd ] = curr;
+        // 2 <= 4
+        const hasOverlap = currStart <= prevEnd;
+        if (hasOverlap) {
+            prev[1] = Math.max(prev[1], curr[1]);
+            continue;
+        }
+
+        merged.push(prev);
+        prev = curr;
+    }
+
+    return [ ...merged, prev ];
+}
+
+console.log(merge([[1,4], [7,9], [2,5]]))

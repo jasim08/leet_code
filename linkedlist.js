@@ -79,8 +79,38 @@ class LinkedList{
         
         return curr;
     }
+    lengthOfList(head){
+        let curr = head;
+        let len = 0;
+        while(curr !== null){
+            len++;
+            curr = curr.next
+        }
+        return len;
+    }
+    removeNthNodefromLast(head, N){
+        let beforeNode = Math.floor(this.lengthOfList(head)/ N);
+        let curr = head;
+        let count = 0;
+        while(curr !== null){
+            if(count == beforeNode){
+            console.log(count , beforeNode)
+                let shiftnode = curr.next.next
+                console.log(shiftnode , curr)
+                curr.next = null;
+                curr.next = shiftnode;
+                shiftnode.prev=curr;
+                curr = curr.next.next;
+                break;
+            }else{
+                count++;
+                curr = curr.next
+            }
+           
+        }
+        return head;
 
-   
+    }
 
    
 
@@ -90,7 +120,10 @@ const list  = new LinkedList();
 list.append('a');
 list.append('b');
 list.append('c');
+list.append('d');
+list.append('e');
 // console.log(list.head);
-console.log(list.reverseList(list.head));
+// console.log(list.lengthOfList(list.head));
+console.log("console.log", list.removeNthNodefromLast(list.head, 1))
 
 
