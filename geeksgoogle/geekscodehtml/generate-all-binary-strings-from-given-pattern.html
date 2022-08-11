@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Geeks for Geeks code problem and solutions, Generate all binary strings from given pattern">
+  <meta name="keywords" content="javaScript, Geeks for geeks,google,geeks,interview,question, Generate all binary strings from given pattern">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="icon" href="https://helperscript.com/wp-content/uploads/2020/03/HELPERSCRIPT_TITLE-LOGO-150x150.png"
+    sizes="32x32">
+  <link rel="icon" href="https://helperscript.com/wp-content/uploads/2020/03/HELPERSCRIPT_TITLE-LOGO-298x300.png"
+    sizes="192x192">
+  <title>Geeks for Geeks - Generate all binary strings from given pattern (Google Interview Question)</title>
+
+  <!-- GOOGLE ANALYTICS AND ADSENSE -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153650065-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153650065-1');
+</script> 
+<!-------------------->
+<script data-ad-client="ca-pub-5170994600118757" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>          
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5170994600118757" crossorigin="anonymous"></script>          
+
+<!-- GOOGLE ANALYTICS AND ADSENSE -->
+
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .content__u3I1 pre {
+      background: #f7f9fa;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Js - Leet code solutions</a>
+  </nav> -->
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="https://helperscript.com/wp-content/uploads/2020/03/HELPERSCRIPT_TITLE-LOGO-298x300.png" width="30"
+        height="30" class="d-inline-block align-top" alt="">
+      GEEKCODE_JS
+    </a>
+    <!-- <a class="ml-auto">MENU</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span>PROBLEMS</span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5 pt-3">
+    <div class="col-12">
+      <h1>Geeks for Geeks - Generate all binary strings from given pattern (Google Interview Question)</h1>
+    </div>
+    <div class="col-12 ">
+
+      <div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a string containing of <strong>0</strong>, <strong>1</strong> and <strong>?</strong> - a wildcard character, generate all distinct&nbsp;<strong>binary strings</strong> that can be formed by replacing each wildcard character by either <strong>0</strong> or <strong>1</strong>.</span></p>
+
+        <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
+        
+        <pre><span style="font-size:18px"><strong>Input: </strong>1??0?101
+        <strong>Output: </strong>10000101 10001101 10100101 10101101 
+        11000101 11001101 11100101 11101101
+        <strong>Explanation:
+        </strong>There will be 8 such possible strings that 
+        can be formed, they are 10000101, 10001101, 
+        10100101, 10101101, 11000101, 11001101, 
+        11100101 and 11101101.
+        </span></pre>
+        
+        <p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
+        
+        <pre><span style="font-size:18px"><strong>Input: </strong>10?</span>
+        <strong><span style="font-size:18px">Output: </span></strong><span style="font-size:18px">100 101</span>
+        <span style="font-size:18px"><strong>Explanation: </strong>There are 2 such possible strings
+        and they are 100 and 101.</span>
+        </pre>
+        
+        <p><strong><span style="font-size:18px">Your Task:</span></strong><br>
+        <span style="font-size:18px">You don't need to read or print anything. Your task is to complete the function&nbsp;<strong>generate_binary_string()&nbsp;</strong>which takes the given string as input parameter and returns a vector of strings containing all the possible strings that can be formed.</span></p>
+        
+        <p><span style="font-size:18px"><strong>Note :&nbsp;</strong>Strings should be printed in lexicographically&nbsp;increasing order.</span></p>
+        
+        <p><span style="font-size:18px"><strong>Expected Time complexity: </strong>O(2<sup>n</sup>)</span><br>
+        <span style="font-size:18px"><strong>Expected Space complexity:&nbsp;</strong>O(n*2<sup>n</sup>)</span></p>
+        
+        <p><span style="font-size:18px"><strong>Constraints:</strong><br>
+        1 ≤&nbsp;length of string ≤ 30</span><br>
+        <span style="font-size:18px"><strong>Note:</strong>&nbsp;Number of '<strong>?</strong>' in&nbsp;any&nbsp;string does not exceed 15.</span></p>
+        </div>
+
+    </div>
+    <div class="col-12">
+      <p>Solutions: <b>Javascript</b> </p>
+      <div class="hilit">
+
+
+       <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">/* we store processed strings in all (array)</span>
+<span style="color: #75715e">we see if string as &quot;?&quot;, if so, replace it with 0 and 1</span>
+<span style="color: #75715e">and send it back to recursive func until base case is reached</span>
+<span style="color: #75715e">which is no wildcard left */</span>
+  
+
+<span style="color: #66d9ef">function</span> <span style="color: #a6e22e">genBinaryStrings</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">s</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">){</span>
+  <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">s</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">includes</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;?&#39;</span><span style="color: #f8f8f2">)){</span>
+    <span style="color: #66d9ef">let</span> <span style="color: #a6e22e">s1</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">/\?/</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;0&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">//only replace once</span>
+    <span style="color: #66d9ef">let</span> <span style="color: #a6e22e">s2</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">s</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">/\?/</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;1&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">//only replace once</span>
+    <span style="color: #a6e22e">genBinaryStrings</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">s1</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #a6e22e">genBinaryStrings</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">s2</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">}</span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2">{</span>
+    <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">push</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">s</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">}</span>
+  <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+  
+<span style="color: #75715e">// Driver code</span>
+<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">genBinaryStrings</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;1??0?101&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">result</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]))</span>
+</pre></div>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="col-12">
+      <p><b>OUTPUT</b></p>
+      <pre class="bg-success text-white"> <b class="text-dark">Accepted</b>
+        Runtime: 87 ms
+          Your input strings
+          1??0?101
+          Output
+          ['10000101', '10001101', '10100101', '10101101', '11000101', '11001101', '11100101', '11101101']
+          Expected
+          ['10000101', '10001101', '10100101', '10101101', '11000101', '11001101', '11100101', '11101101']
+   </pre>
+   <pre>
+    Time Complexity: O(1)
+
+    Auxiliary Space: O(1)
+   </pre>
+       </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    <script src="./js/geeksproblems.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+
+</html>
