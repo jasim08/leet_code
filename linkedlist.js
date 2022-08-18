@@ -112,6 +112,17 @@ class LinkedList{
 
     }
 
+     middleNode(head) {
+        let fast = head;
+        let slow = head;
+      
+        while (fast && fast.next) {
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        return slow;
+      }
+
    
 
 }
@@ -124,6 +135,7 @@ list.append('d');
 list.append('e');
 // console.log(list.head);
 // console.log(list.lengthOfList(list.head));
-console.log("console.log", list.removeNthNodefromLast(list.head, 1))
+// console.log("console.log", list.removeNthNodefromLast(list.head, 1))
+console.log(list.middleNode(list.head));
 
 
